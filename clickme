@@ -1,0 +1,34 @@
+
+
+var x = 100
+var y = 100
+var w = 50
+var h = 50
+var xspeed  = 0
+
+var left_right = true
+var stop = true
+
+document.addEventListener('keydown', function(key){
+  if (key.code == 'KeyA'){
+    stop = false
+    left_right = false
+  }
+  if (key.code == 'KeyD'){
+    stop = false
+    left_right = true
+  }
+
+})
+
+document.addEventListener('keyup', function(key){
+  if (key.code == 'KeyA'){
+    stop = true
+
+    left_right = true
+  }
+  if (key.code == 'KeyD'){
+    left_right = true
+  }
+
+})
